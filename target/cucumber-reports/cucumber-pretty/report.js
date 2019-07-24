@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 6098965039,
+  "duration": 37473968655,
   "status": "passed"
 });
 formatter.background({
@@ -43,7 +43,7 @@ formatter.match({
   "location": "HomePageStepDefs.i_am_on_the_page_on_URL(String)"
 });
 formatter.result({
-  "duration": 3544707523,
+  "duration": 11760315784,
   "status": "passed"
 });
 formatter.match({
@@ -56,7 +56,7 @@ formatter.match({
   "location": "HomePageStepDefs.i_should_see_on_title(String)"
 });
 formatter.result({
-  "duration": 12792022,
+  "duration": 118460920,
   "status": "passed"
 });
 formatter.scenario({
@@ -96,7 +96,7 @@ formatter.match({
   "location": "HomePageStepDefs.i_fill_in_with(String,String)"
 });
 formatter.result({
-  "duration": 311196131,
+  "duration": 1173110288,
   "status": "passed"
 });
 formatter.match({
@@ -109,7 +109,7 @@ formatter.match({
   "location": "HomePageStepDefs.click_on_button(String)"
 });
 formatter.result({
-  "duration": 1294612047,
+  "duration": 2828757617,
   "status": "passed"
 });
 formatter.match({
@@ -126,11 +126,11 @@ formatter.match({
   "location": "HomePageStepDefs.i_should_see_or_on_title(String,String)"
 });
 formatter.result({
-  "duration": 21081778,
+  "duration": 65316318,
   "status": "passed"
 });
 formatter.after({
-  "duration": 338299064,
+  "duration": 939921531,
   "status": "passed"
 });
 });
