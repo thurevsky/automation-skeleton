@@ -1,15 +1,15 @@
 package stepDefinitions;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import pageObjects.*;
 
 public class HomePageStepDefs {
 	private WebDriver driver = Hooks.getDriver();
@@ -40,8 +40,8 @@ public class HomePageStepDefs {
 		switch(arg1) {
 		case "Query Text Box":
 		{
-			wait.until(ExpectedConditions.visibilityOf(pageObjects.HomePage.txt_Query(driver)));
-			pageObjects.HomePage.txt_Query(driver).sendKeys(arg2);
+			wait.until(ExpectedConditions.visibilityOf(HomePage.txt_Query(driver)));
+			HomePage.txt_Query(driver).sendKeys(arg2);
 		}
 		}
 	}
@@ -51,8 +51,8 @@ public class HomePageStepDefs {
 		
 		switch(arg1) {
 		case "Search":{
-			wait.until(ExpectedConditions.visibilityOf(pageObjects.HomePage.btn_Search(driver)));
-			pageObjects.HomePage.btn_Search(driver).click();
+			wait.until(ExpectedConditions.visibilityOf(HomePage.btn_Search(driver)));
+			HomePage.btn_Search(driver).click();
 			logger.info("PASS - " + arg1 + " clicked succesfully");
 		}
 		}
