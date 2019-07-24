@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 7536381881,
+  "duration": 6682915665,
   "status": "passed"
 });
 formatter.background({
@@ -43,7 +43,7 @@ formatter.match({
   "location": "StepDefinitions.i_am_on_the_page_on_URL(String)"
 });
 formatter.result({
-  "duration": 3786764388,
+  "duration": 2499593600,
   "status": "passed"
 });
 formatter.match({
@@ -56,7 +56,7 @@ formatter.match({
   "location": "StepDefinitions.i_should_see_on_title(String)"
 });
 formatter.result({
-  "duration": 29190234,
+  "duration": 32253018,
   "status": "passed"
 });
 formatter.scenario({
@@ -96,7 +96,7 @@ formatter.match({
   "location": "StepDefinitions.i_fill_in_with(String,String)"
 });
 formatter.result({
-  "duration": 486094109,
+  "duration": 345802183,
   "status": "passed"
 });
 formatter.match({
@@ -109,7 +109,7 @@ formatter.match({
   "location": "StepDefinitions.click_on_button(String)"
 });
 formatter.result({
-  "duration": 1223155334,
+  "duration": 2787915925,
   "status": "passed"
 });
 formatter.match({
@@ -126,11 +126,11 @@ formatter.match({
   "location": "StepDefinitions.i_should_see_or_on_title(String,String)"
 });
 formatter.result({
-  "duration": 93770032,
+  "duration": 6522123,
   "status": "passed"
 });
 formatter.after({
-  "duration": 482835045,
+  "duration": 336904166,
   "status": "passed"
 });
 });
