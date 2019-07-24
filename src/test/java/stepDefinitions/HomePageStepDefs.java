@@ -11,10 +11,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class StepDefinitions {
+public class HomePageStepDefs {
 	private WebDriver driver = Hooks.getDriver();
 	private Logger logger = Hooks.getLogger();
-	private WebDriverWait wait = new WebDriverWait(driver,10);
+	private WebDriverWait wait = Hooks.getWait();
 	
 	@Given("^I am on the page on URL \"([^\"]*)\"$")
 	public void i_am_on_the_page_on_URL(String arg1) throws Throwable {
@@ -36,14 +36,25 @@ public class StepDefinitions {
 
 	@When("^I fill in \"([^\"]*)\" with \"([^\"]*)\"$")
 	public void i_fill_in_with(String arg1, String arg2) throws Throwable {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(arg1)));
-		driver.findElement(By.xpath(arg1)).sendKeys(arg2);
+		
+		switch(arg1) {
+		case "Query Text Box":
+		{
+			wait.until(ExpectedConditions.visibilityOf(pageObjects.HomePage.txt_Query(driver)));
+			pageObjects.HomePage.txt_Query(driver).sendKeys(arg2);
+		}
+		}
 	}
 
 	@When("^click on \"([^\"]*)\" button$")
 	public void click_on_button(String arg1) throws Throwable {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(arg1)));
-		driver.findElement(By.xpath(arg1)).click();
-		logger.info("PASS - " + arg1 + " clicked succesfully");
+		
+		switch(arg1) {
+		case "Search":{
+			wait.until(ExpectedConditions.visibilityOf(pageObjects.HomePage.btn_Search(driver)));
+			pageObjects.HomePage.btn_Search(driver).click();
+			logger.info("PASS - " + arg1 + " clicked succesfully");
+		}
+		}
 	}
 }

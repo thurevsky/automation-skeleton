@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 6682915665,
+  "duration": 6098965039,
   "status": "passed"
 });
 formatter.background({
@@ -40,10 +40,10 @@ formatter.match({
       "offset": 25
     }
   ],
-  "location": "StepDefinitions.i_am_on_the_page_on_URL(String)"
+  "location": "HomePageStepDefs.i_am_on_the_page_on_URL(String)"
 });
 formatter.result({
-  "duration": 2499593600,
+  "duration": 3544707523,
   "status": "passed"
 });
 formatter.match({
@@ -53,10 +53,10 @@ formatter.match({
       "offset": 14
     }
   ],
-  "location": "StepDefinitions.i_should_see_on_title(String)"
+  "location": "HomePageStepDefs.i_should_see_on_title(String)"
 });
 formatter.result({
-  "duration": 32253018,
+  "duration": 12792022,
   "status": "passed"
 });
 formatter.scenario({
@@ -69,12 +69,12 @@ formatter.scenario({
 });
 formatter.step({
   "line": 11,
-  "name": "I fill in \"//input[@name\u003d\u0027q\u0027]\" with \"Wikipedia\"",
+  "name": "I fill in \"Query Text Box\" with \"Wikipedia\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 12,
-  "name": "click on \"//input[@name\u003d\u0027btnK\u0027]\" button",
+  "name": "click on \"Search\" button",
   "keyword": "And "
 });
 formatter.step({
@@ -85,31 +85,31 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "//input[@name\u003d\u0027q\u0027]",
+      "val": "Query Text Box",
       "offset": 11
     },
     {
       "val": "Wikipedia",
-      "offset": 37
+      "offset": 33
     }
   ],
-  "location": "StepDefinitions.i_fill_in_with(String,String)"
+  "location": "HomePageStepDefs.i_fill_in_with(String,String)"
 });
 formatter.result({
-  "duration": 345802183,
+  "duration": 311196131,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "//input[@name\u003d\u0027btnK\u0027]",
+      "val": "Search",
       "offset": 10
     }
   ],
-  "location": "StepDefinitions.click_on_button(String)"
+  "location": "HomePageStepDefs.click_on_button(String)"
 });
 formatter.result({
-  "duration": 2787915925,
+  "duration": 1294612047,
   "status": "passed"
 });
 formatter.match({
@@ -123,14 +123,14 @@ formatter.match({
       "offset": 45
     }
   ],
-  "location": "StepDefinitions.i_should_see_or_on_title(String,String)"
+  "location": "HomePageStepDefs.i_should_see_or_on_title(String,String)"
 });
 formatter.result({
-  "duration": 6522123,
+  "duration": 21081778,
   "status": "passed"
 });
 formatter.after({
-  "duration": 336904166,
+  "duration": 338299064,
   "status": "passed"
 });
 });
