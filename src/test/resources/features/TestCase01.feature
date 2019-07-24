@@ -8,6 +8,6 @@ Background: Open Google on Chrome
 	Then I should see "Google" on title
 
 Scenario: Search Wikipedia and verify
-	When I fill in "" with ""
-	And click on "" button
-	Then I should see "" on title
+	When I fill in "//input[@name='q']" with "Wikipedia"
+	And click on "//input[@name='btnK']" button
+	Then I should see "Wikipedia - Google Search" or "Wikipedia - Penelusuran Google" on title

@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 16010196499,
+  "duration": 7536381881,
   "status": "passed"
 });
 formatter.background({
@@ -43,7 +43,7 @@ formatter.match({
   "location": "StepDefinitions.i_am_on_the_page_on_URL(String)"
 });
 formatter.result({
-  "duration": 3019612714,
+  "duration": 3786764388,
   "status": "passed"
 });
 formatter.match({
@@ -56,9 +56,8 @@ formatter.match({
   "location": "StepDefinitions.i_should_see_on_title(String)"
 });
 formatter.result({
-  "duration": 17687852,
-  "error_message": "java.lang.Exception\n\tat stepDefinitions.StepDefinitions.i_should_see_on_title(StepDefinitions.java:22)\n\tat ✽.Then I should see \"Google\" on title(TestCase01.feature:8)\n",
-  "status": "failed"
+  "duration": 29190234,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -70,61 +69,68 @@ formatter.scenario({
 });
 formatter.step({
   "line": 11,
-  "name": "I fill in \"\" with \"\"",
+  "name": "I fill in \"//input[@name\u003d\u0027q\u0027]\" with \"Wikipedia\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 12,
-  "name": "click on \"\" button",
+  "name": "click on \"//input[@name\u003d\u0027btnK\u0027]\" button",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "I should see \"\" on title",
+  "name": "I should see \"Wikipedia - Google Search\" or \"Wikipedia - Penelusuran Google\" on title",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "",
+      "val": "//input[@name\u003d\u0027q\u0027]",
       "offset": 11
     },
     {
-      "val": "",
-      "offset": 19
+      "val": "Wikipedia",
+      "offset": 37
     }
   ],
   "location": "StepDefinitions.i_fill_in_with(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 486094109,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "",
+      "val": "//input[@name\u003d\u0027btnK\u0027]",
       "offset": 10
     }
   ],
   "location": "StepDefinitions.click_on_button(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1223155334,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "",
+      "val": "Wikipedia - Google Search",
       "offset": 14
+    },
+    {
+      "val": "Wikipedia - Penelusuran Google",
+      "offset": 45
     }
   ],
-  "location": "StepDefinitions.i_should_see_on_title(String)"
+  "location": "StepDefinitions.i_should_see_or_on_title(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 93770032,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 694893059,
+  "duration": 482835045,
   "status": "passed"
 });
 });

@@ -1,6 +1,9 @@
 package stepDefinitions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -9,6 +12,7 @@ import cucumber.api.java.en.When;
 
 public class StepDefinitions {
 	private WebDriver driver = Hooks.getDriver();
+	private WebDriverWait wait = new WebDriverWait(driver,10);
 	
 	@Given("^I am on the page on URL \"([^\"]*)\"$")
 	public void i_am_on_the_page_on_URL(String arg1) throws Throwable {
@@ -17,18 +21,23 @@ public class StepDefinitions {
 
 	@Then("^I should see \"([^\"]*)\" on title$")
 	public void i_should_see_on_title(String arg1) throws Throwable {
-		System.out.println("\"" + driver.getTitle() + "\"");
-		System.out.println("\"" + arg1 + "\"");
-		if(driver.getTitle() != arg1) throw new Exception();
+		wait.until(ExpectedConditions.titleIs(arg1));
+	}
+	
+	@Then("^I should see \"([^\"]*)\" or \\\"([^\\\"]*)\\\" on title$")
+	public void i_should_see_or_on_title(String arg1, String arg2) throws Throwable {
+		wait.until(ExpectedConditions.or(ExpectedConditions.titleIs(arg1), ExpectedConditions.titleIs(arg2)));
 	}
 
 	@When("^I fill in \"([^\"]*)\" with \"([^\"]*)\"$")
 	public void i_fill_in_with(String arg1, String arg2) throws Throwable {
-		System.out.println("I fill in " + arg1 + " with " + arg2);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(arg1)));
+		driver.findElement(By.xpath(arg1)).sendKeys(arg2);
 	}
 
 	@When("^click on \"([^\"]*)\" button$")
 	public void click_on_button(String arg1) throws Throwable {
-		System.out.println("click on" + arg1 + " button");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(arg1)));
+		driver.findElement(By.xpath(arg1)).click();
 	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="19.801" tests="1" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="13.753" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib"/>
@@ -25,7 +25,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/sahidnurafrizal/Projects/DefaultAutomation/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2297035507899817497.tmp"/>
+    <property name="classworlds.conf" value="/Users/sahidnurafrizal/Projects/DefaultAutomation/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf4970908270009825854.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/sahidnurafrizal/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -58,36 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="feature" classname="TestRunner" time="19.801">
-    <failure message="java.lang.Exception" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: java.lang.Exception
-	at stepDefinitions.StepDefinitions.i_should_see_on_title(StepDefinitions.java:22)
-	at ✽.Then I should see "Google" on title(TestCase01.feature:8)
-</failure>
-    <system-out><![CDATA[@TestCase01
-Feature: Search
-  Just search "Wikipedia" on Google Search
-  Then blah blah blah
-"Google"
-"Google"
-
-  Background: Open Google on Chrome                         &amp#27;[90m# TestCase01.feature:6&amp#27;[0m
-    &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the page on URL "&amp#27;[0m&amp#27;[32m&amp#27;[1mhttps://www.google.com/&amp#27;[0m&amp#27;[32m"&amp#27;[0m &amp#27;[90m# StepDefinitions.i_am_on_the_page_on_URL(String)&amp#27;[0m
-    &amp#27;[31mThen &amp#27;[0m&amp#27;[31mI should see "&amp#27;[0m&amp#27;[31m&amp#27;[1mGoogle&amp#27;[0m&amp#27;[31m" on title&amp#27;[0m                     &amp#27;[90m# StepDefinitions.i_should_see_on_title(String)&amp#27;[0m
-      &amp#27;[31mjava.lang.Exception
-      	at stepDefinitions.StepDefinitions.i_should_see_on_title(StepDefinitions.java:22)
-      	at ✽.Then I should see "Google" on title(TestCase01.feature:8)
-      &amp#27;[0m
-
-  Scenario: Search Wikipedia and verify &amp#27;[90m# TestCase01.feature:10&amp#27;[0m
-    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI fill in "&amp#27;[0m&amp#27;[36m&amp#27;[1m&amp#27;[0m&amp#27;[36m" with "&amp#27;[0m&amp#27;[36m&amp#27;[1m&amp#27;[0m&amp#27;[36m"&amp#27;[0m           &amp#27;[90m# StepDefinitions.i_fill_in_with(String,String)&amp#27;[0m
-    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mclick on "&amp#27;[0m&amp#27;[36m&amp#27;[1m&amp#27;[0m&amp#27;[36m" button&amp#27;[0m              &amp#27;[90m# StepDefinitions.click_on_button(String)&amp#27;[0m
-    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see "&amp#27;[0m&amp#27;[36m&amp#27;[1m&amp#27;[0m&amp#27;[36m" on title&amp#27;[0m       &amp#27;[90m# StepDefinitions.i_should_see_on_title(String)&amp#27;[0m
-]]></system-out>
-    <system-err>Starting ChromeDriver 75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}) on port 26090
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Jul 24, 2019 11:07:00 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-</system-err>
-  </testcase>
+  <testcase name="feature" classname="TestRunner" time="13.753"/>
 </testsuite>
