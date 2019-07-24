@@ -1,0 +1,151 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Open Google on Chrome",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3019612714,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on the page on URL \"https://www.google.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.google.com/",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.i_am_on_the_page_on_URL(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17687852,
+              "error_message": "java.lang.Exception\n\tat stepDefinitions.StepDefinitions.i_should_see_on_title(StepDefinitions.java:22)\n\tat ✽.Then I should see \"Google\" on title(TestCase01.feature:8)\n",
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "I should see \"Google\" on title",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Google",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefinitions.i_should_see_on_title(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 16010196499,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initializeTest()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Search Wikipedia and verify",
+        "description": "",
+        "id": "search;search-wikipedia-and-verify",
+        "after": [
+          {
+            "result": {
+              "duration": 694893059,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "I fill in \"\" with \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 11
+                },
+                {
+                  "val": "",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.i_fill_in_with(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "click on \"\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefinitions.click_on_button(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "I should see \"\" on title",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefinitions.i_should_see_on_title(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search",
+    "description": "Just search \"Wikipedia\" on Google Search\nThen blah blah blah",
+    "id": "search",
+    "keyword": "Feature",
+    "uri": "TestCase01.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@TestCase01"
+      }
+    ]
+  }
+]
