@@ -4,10 +4,9 @@ Feature: Search
 	Then blah blah blah
 
 Background: Open Google on Chrome
-	Given I am on the page on URL "https://www.google.com/"
-	Then I should see "Google" on title
+	Given User was on the homepage
 
 Scenario: Search Wikipedia and verify
-	When I fill in "Query Text Box" with "Wikipedia"
-	And click on "Search" button
-	Then I should see "Wikipedia - Google Search" or "Wikipedia - Penelusuran Google" on title
+	When User fills in "Query Text Box" with "Wikipedia"
+	And User clicks on "Search" button
+	Then User should see "Wikipedia - Google Search" or "Wikipedia - Penelusuran Google" on title
