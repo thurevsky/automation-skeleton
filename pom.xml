@@ -12,13 +12,16 @@
         <java.version>1.8</java.version>
         <testng.version>6.3.1</testng.version>
         <maven.compiler.version>3.3</maven.compiler.version>
+        <cucumber.version>1.2.5</cucumber.version>
+        <log4j.version>1.2.17</log4j.version>
+        <selenium.version>3.141.59</selenium.version>
     </properties>
 
     <dependencies>
         <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-java</artifactId>
-        <version>1.2.5</version>
+        <version>${cucumber.version}</version>
         <scope>test</scope>
     </dependency>
     <dependency>
@@ -30,7 +33,7 @@
     <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-testng</artifactId>
-        <version>1.2.5</version>
+        <version>${cucumber.version}</version>
         <scope>test</scope>
     </dependency>
         
@@ -46,14 +49,14 @@
 		<dependency>
 		    <groupId>log4j</groupId>
 		    <artifactId>log4j</artifactId>
-		    <version>1.2.17</version>
+		    <version>${log4j.version}</version>
 		</dependency>
 	
 	    <!-- Dependency for selenium automation -->
 		<dependency>
 		    <groupId>org.seleniumhq.selenium</groupId>
 		    <artifactId>selenium-java</artifactId>
-		    <version>3.141.59</version>
+		    <version>${selenium.version}</version>
 		</dependency>
     </dependencies>
 

@@ -1,4 +1,7 @@
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.annotations.*;
 
 import cucumber.api.CucumberOptions;
@@ -23,6 +26,7 @@ public class TestRunner {
     @BeforeClass(alwaysRun = true)
     public void setUpClass() throws Exception {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+        setCurrentDateToSystemProps();
     }
  
     @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
@@ -39,4 +43,9 @@ public class TestRunner {
     public void tearDownClass() throws Exception {
         testNGCucumberRunner.finish();
     }
+    
+    private void setCurrentDateToSystemProps() {
+    	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+    	System.setProperty("current.date", dateFormat.format(new Date()));
+    } 
 }

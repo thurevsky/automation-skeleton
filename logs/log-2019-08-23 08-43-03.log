@@ -1,0 +1,3 @@
+2019-08-23 08:43:14,316 INFO  [HomePageStepDefs] Query Text Box filled with Wikipedia 
+2019-08-23 08:43:18,835 INFO  [HomePageStepDefs] Search clicked succesfully 
+2019-08-23 08:43:18,850 INFO  [CommonStepDefs] String Wikipedia - Google Search or Wikipedia - Penelusuran Google detected succesfully 

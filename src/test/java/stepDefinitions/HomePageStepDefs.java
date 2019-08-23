@@ -1,23 +1,21 @@
 package stepDefinitions;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import utils.Log;
 
 public class HomePageStepDefs {
 	private WebDriver driver = Hooks.getDriver();
-	private Logger logger = Hooks.getLogger();
-	private WebDriverWait wait = Hooks.getWait();
 	private pageObjectFactories.HomePage facHomePage;
+	private Log logger;
 	
 	public HomePageStepDefs() {
 		this.facHomePage = PageFactory.initElements(driver, pageObjectFactories.HomePage.class);
+		logger = new Log(this.getClass());
 	}
 	
 	@When("^User fills in \"([^\"]*)\" with \"([^\"]*)\"$")
@@ -26,10 +24,12 @@ public class HomePageStepDefs {
 		switch(arg1) {
 		case "Query Text Box":
 		{
-			wait.until(ExpectedConditions.visibilityOf(facHomePage.txt_Query));
 			facHomePage.txt_Query.sendKeys(arg2);
+			break;
 		}
 		}
+		
+		logger.info(arg1 + " filled with " + arg2);
 	}
 
 	@When("^User clicks on \"([^\"]*)\" button$")
@@ -37,10 +37,11 @@ public class HomePageStepDefs {
 		
 		switch(arg1) {
 		case "Search":{
-			wait.until(ExpectedConditions.visibilityOf(facHomePage.btn_Search));
 			facHomePage.btn_Search.click();
-			logger.info("PASS - " + arg1 + " clicked succesfully");
+			break;
 		}
 		}
+		
+		logger.info(arg1 + " clicked succesfully");
 	}
 }
